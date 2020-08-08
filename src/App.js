@@ -22,6 +22,8 @@ import { CartScreen } from "./screens/CartScreen";
 import { SignInScreen } from "./screens/SignInScreen";
 import { useSelector } from "react-redux";
 import { RegisterScreen } from "./screens/RegisterScreen";
+import { AddProductScreen } from "./screens/AddProductScreen";
+import { ProductListScreen } from "./screens/ProductListScreen";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +60,9 @@ function App() {
                   <NavLink href="/components/">Sign In</NavLink>
                 </NavItem>
               )}
-
+              <NavItem>
+                <Link to="/products">Product List</Link>
+              </NavItem>
               <NavItem>
                 <Link to="/register">Register</Link>
               </NavItem>
@@ -68,6 +72,8 @@ function App() {
         </Navbar>
         <Route path="/sigin" component={SignInScreen} />
         <Route path="/register" component={RegisterScreen} />
+        <Route path="/addProduct" component={AddProductScreen} />
+        <Route path="/products" component={ProductListScreen} />
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/" exact component={HomeScreen} />

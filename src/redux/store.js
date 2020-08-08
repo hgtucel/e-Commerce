@@ -1,6 +1,6 @@
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
-import {productListReducer, productDetailsReducer} from './reducers/productReducers'
+import {productListReducer, productDetailsReducer, saveProductReducer, deleteProductReducer} from './reducers/productReducers'
 import {cartReducer} from './reducers/cartReducer'
 import {signInReducer, registerReducer} from './reducers/userReducer'
 import Cookie from 'js-cookie'
@@ -11,6 +11,8 @@ const initialState = {userSignIn: {userInfo}};
 const reducer = combineReducers({
     productListReducer,
     productDetailsReducer,
+    saveProductReducer,
+    deleteProductReducer,
     cartReducer,
     signInReducer,
     registerReducer
